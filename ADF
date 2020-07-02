@@ -2,7 +2,7 @@
 # log_x asks whether to log X prior to testing or not
 def stationarity_test(X, log_x = "Y"):
     
-    # If X isn't logged, we need to log it for better results
+    # If X isn't logged, we can log it for to make the data less variable
     if log_x == "Y":
         X = np.log(X[X>0])
     
