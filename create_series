@@ -1,0 +1,8 @@
+def create_series(df, xcol, datecol):
+    # Create a dataframe with the features and the date time as the index
+    features_considered = [xcol]
+    features = df[features_considered]
+    features.index = df[datecol]
+    features.head()
+    features.plot(subplots=True)
+    return features
